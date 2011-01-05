@@ -1,0 +1,30 @@
+name:                snap-connectionpool
+version:             0.1
+synopsis:            A snap extension for pooling HDBC database connections
+homepage:            http://github.com/duairc/snap-connectionpool
+license:             OtherLicense
+license-file:        LICENSE
+author:              Shane O'Brien
+maintainer:          shane@duairc.com
+stability:           Experimental
+category:            Web
+cabal-version:       >= 1.2
+build-type:          Simple
+
+extra-source-files:
+  CONTRIBUTORS,
+  LICENSE
+
+Library
+  hs-source-dirs: src
+
+  exposed-modules:
+    Snap.Extension.ConnectionPool,
+    Snap.Extension.ConnectionPool.Impl
+
+  build-depends:
+    base >= 4 && < 5,
+    HDBC >= 2,
+    mtl >= 2,
+    snap >= 0.3 && < 0.5,
+    snap-core >= 0.3 && < 0.5
